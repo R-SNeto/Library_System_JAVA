@@ -45,7 +45,7 @@ public class UserServices {
 			return false;
 		}
 	}
-	
+	//Check if the user is eligible for a loan
 	public boolean checkUserStatus() {
 		for(int i = 0; i < userList.size(); i++) {
 			if(userList.get(i).getUserAvailable() == true) {
