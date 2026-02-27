@@ -34,7 +34,6 @@ public class Books {
 		this.bookAvailable = bookAvailable;
 	}
 
-	@Override
 	public String toString() {
 		return "--------------------------\n" +
 				"Book title: " + bookTitle + "\n" + 
