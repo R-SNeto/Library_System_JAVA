@@ -54,7 +54,7 @@ public class BookServices {
 		}
 		
 	}
-	
+	//Check if the book is available for a loan
 	public boolean checkBookStatus() {
 		for(int i = 0; i < bookList.size(); i++) {
 			if(bookList.get(i).getBookAvailable() == true) {
