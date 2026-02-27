@@ -15,8 +15,6 @@ public class Loans {
 		this.loanDate = loanDate;
 		this.returnDate = this.loanDate.plusDays(7);
 	}
-
-	
 	
 	public String getUserId() {
 		return userId;
