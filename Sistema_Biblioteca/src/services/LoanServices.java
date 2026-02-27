@@ -27,7 +27,7 @@ public class LoanServices {
 			return false;
 		}
 	}
-	
+	//Check if the user is on the list
 	public boolean checkUserInList(String userId) {
 		for(int i = 0; i < loanList.size(); i++) {
 			if (loanList.get(i).getUserId().equals(userId)) {
@@ -36,7 +36,7 @@ public class LoanServices {
 		}
 		return false;
 	}
-	
+	//Check if the book is on the list
 	public boolean checkBookInList(String bookId) {
 		for(int i = 0; i < loanList.size(); i++) {
 			if (loanList.get(i).getBookId().equals(bookId)) {
@@ -48,11 +48,11 @@ public class LoanServices {
 	
 	//FUNCIONALITIES AREA
 	
-	
+	//Register a loan
 	public void registerLoan(Loans loan) {
 		loanList.add(loan);
 	}
-	
+	//Remove a loan
 	public boolean removeLoan(Scanner sc, String userIdTyped, String bookIdTyped) {
 		for (int i = 0; i < loanList.size(); i++) {
 			if (loanList.get(i).getUserId().equals(userIdTyped) && loanList.get(i).getBookId().equals(bookIdTyped)) {
@@ -66,7 +66,7 @@ public class LoanServices {
 		}
 		return false;
 	}
-	
+	//Displays the loan list
 	public void showLoanList() {
 		for(Loans lList: loanList) {
 			System.out.println(lList);
