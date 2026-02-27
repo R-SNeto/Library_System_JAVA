@@ -121,7 +121,7 @@ public class BooksUI {
 	public void showRemoveBookMenu() {
 		
 		while(true) {
-
+			//Check if the book list is empty
 			if(bookService.checkBookListStatus()) {
 				System.out.println("\nList is empty, returning to menu...\n");
 				return;
@@ -141,7 +141,7 @@ public class BooksUI {
 					return;
 				}
 			}
-			
+			//Check if the book data is correct, if yes it will remove the book 
 			if(bookService.removeBook(sc, bookId)) {
 				System.out.println("\nBook removed sucessfully\n");
 				if(!validator.askYesOrNot(sc)) {
@@ -156,7 +156,7 @@ public class BooksUI {
 	
 	public void showBookList() {
 		System.out.println("    BOOK LIST    ");
-		
+		//Check is the book list is empty
 		if(bookService.checkBookListStatus()) {
 			System.out.println("-----------------");
 			System.out.println("      EMPTY      ");
