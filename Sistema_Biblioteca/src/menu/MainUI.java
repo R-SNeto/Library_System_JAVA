@@ -28,7 +28,7 @@ public class MainUI {
 		this.userUi = new UsersUI(sc, validator, userService);
 		this.loanUi = new LoansUI(sc, validator, userService, bookService, loanService);
 	}
-
+	//Starts the main menu
 	public void startProgram() {
 		mainMenu();
 	}
