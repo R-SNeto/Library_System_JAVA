@@ -62,12 +62,12 @@ public class LoansUI {
 	public void showRegisterLoanMenu() {
 		
 		while(true) {
-
+			//Check if the user list is empty
 			if(userService.checkUserListStatus()) {
 				System.out.println("User list is empty");
 				break;
 			}
-			
+			//Check if the book list is empty	
 			if(bookService.checkBookListStatus()) {
 				System.out.println("Book list is empty");
 				break;
@@ -77,7 +77,7 @@ public class LoansUI {
 			System.out.println("-----------------------");
 			System.out.print("Enter the user ID: ");
 			String userId = sc.nextLine();
-
+			//Check if the user exists on the list
 			while(!userService.userIdDuplicated(userId)) {
 				System.out.print("This user doesn't exist, try again [type 0 to leave]: ");
 				userId = sc.nextLine();
@@ -85,7 +85,7 @@ public class LoansUI {
 					return;
 				}
 			}
-			
+			//Check if the user already have a outstanding loan
 			if(!userService.checkUserStatus()) {
 				System.out.println("This user already have an outstanding loan");
 				return;
@@ -93,7 +93,7 @@ public class LoansUI {
 			
 			System.out.print("Enter the bookd ID: ");
 			String bookId = sc.nextLine();
-			
+			//Check if the book exists on the list
 			while(!bookService.bookIdDuplicated(bookId)) {
 				System.out.print("This book doesn't exist, try again [type 0 to leave]: ");
 				bookId = sc.nextLine();
@@ -101,7 +101,7 @@ public class LoansUI {
 					return;
 				}
 			}
-			
+			//Check if the book is available for a loan
 			if(!bookService.checkBookStatus()) {
 				System.out.println("This book isn't available");
 				return;
@@ -119,7 +119,7 @@ public class LoansUI {
 	public void showReturnBookMenu() {
 		
 		while(true) {
-			
+			//Check if the loan list is empty
 			if(loanService.checkLoanListStatus()) {
 				System.out.println("\nList is empty, returning to menu...\n");
 			}
@@ -128,7 +128,7 @@ public class LoansUI {
 			System.out.println("-----------------------");
 			System.out.print("Enter the user ID: ");
 			String userId = sc.nextLine();
-
+			//Check if the user exists on the loan list
 			while(!loanService.checkUserInList(userId)) {
 				System.out.print("This user doesn't exist in the list, try again [type 0 to leave]:");
 				if(userId.equals("0")) {
@@ -138,7 +138,7 @@ public class LoansUI {
 
 			System.out.print("Enter the book ID: ");
 			String bookId = sc.nextLine();
-
+			//Check if the book exists on the loan list
 			while(!loanService.checkBookInList(bookId)) {
 				System.out.print("This book doesn't exist in the list, try again [type 0 to leave]: ");
 				if(bookId.equals("0")) {
@@ -153,7 +153,7 @@ public class LoansUI {
 	}
 	public void showLoanList() {
 		System.out.println("    LOAN LIST   ");
-		
+		//Check if the loan list is empty
 		if(loanService.checkLoanListStatus()) {
 			System.out.println("-----------------");
 			System.out.println("      EMPTY      ");
