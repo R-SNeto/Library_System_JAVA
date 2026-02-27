@@ -62,7 +62,7 @@ public class UsersUI {
 			String userName = sc.nextLine();
 			System.out.print("Enter the user ID: ");
 			String userId = sc.nextLine();
-
+			//Check if the user ID has the correct length
 			while (userService.correctUserIdLength(userId)) {
 				System.out.print("Invalid user ID length, try again [type 0 to leave]: ");
 				userId = sc.nextLine();
@@ -70,7 +70,7 @@ public class UsersUI {
 					return;
 				}
 			}
-
+			//Check if the user ID already exists
 			while(userService.userIdDuplicated(userId)) {
 				System.out.print("Already have a user with this ID, try again [type 0 to leave]: ");
 				userId = sc.nextLine();
@@ -94,7 +94,7 @@ public class UsersUI {
 	}
 	public void showRemoveUserMenu() {
 		while(true) {
-
+			//Check if the user list is empty
 			if(userService.checkUserListStatus()) {
 				System.out.println("\nList is empty, returning to menu...\n");
 				return;
@@ -128,7 +128,7 @@ public class UsersUI {
 	}
 	public void showUserList() {
 		System.out.println("    USER LIST    ");
-		
+		//Check if the user list is empty
 		if(userService.checkUserListStatus()) {
 			System.out.println("-----------------");
 			System.out.println("      EMPTY      ");
