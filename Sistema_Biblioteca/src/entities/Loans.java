@@ -28,7 +28,6 @@ public class Loans {
 		return loanDate;
 	}
 
-	@Override
 	public String toString() {
 		return "--------------------------\n" 
 				+ "User ID: " +  userId + "\n" 
