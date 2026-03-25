@@ -1,3 +1,5 @@
+# Português (BR)
+
 # Library System - Java
 
 Sistema de gerenciamento de biblioteca desenvolvido em **Java**, com foco na aplicação prática de conceitos fundamentais de **Programação Orientada a Objetos (POO)** e organização em camadas.
@@ -47,3 +49,47 @@ O sistema segue uma separação lógica de responsabilidades:
 1. Clone o repositório.
 2. Abra o projeto na sua IDE (Eclipse, IntelliJ, etc).
 3. Execute a classe principal.
+---
+
+# English
+
+# Library System - Java
+
+A library management system developed in Java, focused on the practical application of core Object-Oriented Programming (OOP) concepts and layered architecture organization.
+
+The project simulates real-world library operations, such as book and user registration, loan management, and return control.
+---
+
+# Project Architecture
+
+The system follows a clear separation of responsibilities:
+
+Entities → Representation of core objects (Book, User, Loan, etc.)
+Services → Business logic and rules
+UI → User interaction through a console interface
+---
+# Features
+- Book registration
+- User registration
+- Book removal
+- User removal
+- Book listing
+- User listing
+- Loan management
+- Return registration
+- Input validation
+- Availability control for books and users
+---
+# Concepts Applied
+- Object-Oriented Programming (OOP)
+- Encapsulation
+- Collections (ArrayList)
+- Exception handling
+- Layered architecture
+- Code organization best practices
+- Use of LocalDateTime for date control (when applicable)
+---
+# How to Run
+1. Clone the repository
+2. Open the project in your IDE (Eclipse, IntelliJ, etc.)
+3. Run the main class
