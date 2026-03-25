@@ -64,9 +64,9 @@ The project simulates real-world library operations, such as book and user regis
 
 The system follows a clear separation of responsibilities:
 
-Entities → Representation of core objects (Book, User, Loan, etc.)
-Services → Business logic and rules
-UI → User interaction through a console interface
+- **Entities** → Representation of core objects (Book, User, Loan, etc.)
+- **Services** → Business logic and rules
+- **UI** → User interaction through a console interface
 ---
 # Features
 - Book registration
@@ -83,11 +83,11 @@ UI → User interaction through a console interface
 # Concepts Applied
 - Object-Oriented Programming (OOP)
 - Encapsulation
-- Collections (ArrayList)
+- Collections ('ArrayList')
 - Exception handling
 - Layered architecture
 - Code organization best practices
-- Use of LocalDateTime for date control (when applicable)
+- Use of 'LocalDateTime' for date control (when applicable)
 ---
 # How to Run
 1. Clone the repository
